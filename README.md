@@ -21,10 +21,28 @@ Non-breaking space: &nbsp; are here on purpose to fix emoji rendering on certain
 
 -->
 
-## Install
+## Usage
+
+Run `strip-app` immediately after creating a new app.
 
 ```bash
-npm install strip-app
+npx strip-app@latest
+```
+
+For Next.js apps:
+
+```bash
+npx create-next-app@latest
+cd your-project
+npx strip-app@latest
+```
+
+For Gatsby apps:
+
+```bash
+npm init gatsby
+cd your-project
+npx strip-app@latest
 ```
 
 ## Documentation
