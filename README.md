@@ -29,7 +29,7 @@ Run `strip-app` immediately after creating a new app.
 npx strip-app@latest
 ```
 
-For Next.js apps:
+For [Next.js](https://nextjs.org/) apps:
 
 ```bash
 npx create-next-app@latest
@@ -37,13 +37,22 @@ cd your-project
 npx strip-app@latest
 ```
 
-For Gatsby apps:
+For [Gatsby](https://www.gatsbyjs.com/) apps:
 
 ```bash
 npm init gatsby
 cd your-project
 npx strip-app@latest
 ```
+
+### Supported starters
+
+| Starter                                                      | Command                                                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| [**Next.js**](https://nextjs.org/)                           | `npx create-next-app` ([Docs](https://nextjs.org/docs/api-reference/create-next-app)) |
+| [**Gatsby**](https://www.gatsbyjs.com/)                      | `npm init gatsby` ([Docs](https://www.gatsbyjs.com/docs/quick-start/))                |
+| [**Create React App**](https://create-react-app.dev/) (soon) | `npx create-react-app` ([Docs](https://create-react-app.dev/docs/getting-started))    |
+| [**Vite**](https://vitejs.dev/) (soon)                       | `npm init vite@latest` ([Docs](https://vitejs.dev/guide/))                            |
 
 ## Documentation
 
