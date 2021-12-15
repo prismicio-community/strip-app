@@ -52,13 +52,13 @@ const main = async () => {
 	const typeWasDetected = Boolean(type && !cli.flags.type);
 
 	if (!type) {
-		console.log(`Unable to detect app type. Exiting.`);
+		console.info(`Unable to detect app type. Exiting.`);
 
 		return;
 	}
 
 	if (typeWasDetected) {
-		console.log(`Detected ${type}\n`);
+		console.info(`Detected ${type}\n`);
 	}
 
 	const processArgs: ProcessArgs = { cliContext: cli };
@@ -75,7 +75,7 @@ const main = async () => {
 		}
 
 		default: {
-			console.log(`${type} is unsupported. Exiting.`);
+			console.info(`${type} is unsupported. Exiting.`);
 		}
 	}
 

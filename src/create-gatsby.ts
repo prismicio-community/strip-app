@@ -22,7 +22,7 @@ export const process = async ({ cliContext }: ProcessArgs) => {
 	]);
 
 	if (entries.length < 1) {
-		console.log("Nothing to delete");
+		console.info("Nothing to delete");
 
 		return;
 	}

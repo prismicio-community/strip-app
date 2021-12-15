@@ -14,23 +14,23 @@ export const deleteEntries = async (
 	{ cliContext }: DeleteEntriesArgs,
 ): Promise<void> => {
 	if (!cliContext.flags.confirm) {
-		console.log(`The following files will be deleted:\n`);
-		console.log(
+		console.info(`The following files will be deleted:\n`);
+		console.info(
 			entries
 				.sort((a, b) => a.path.localeCompare(b.path))
 				.map((path) => `${chalk.bgRed.bold("DELETE")} ${path.path}\n`)
 				.join(""),
 		);
-		console.log(`Press ENTER to continue`);
-		console.log(`Press CTRL + C to cancel`);
+		console.info(`Press ENTER to continue`);
+		console.info(`Press CTRL + C to cancel`);
 
 		await waitForConfirm();
 
-		console.log();
+		console.info();
 	}
 
 	for (const entry of entries) {
-		console.log(`${chalk.red("deleted")}  ${entry.path}`);
+		console.info(`${chalk.red("deleted")}  ${entry.path}`);
 
 		if (!cliContext.flags.dryRun && existsSync(entry.path)) {
 			if (entry.stats?.isDirectory()) {

@@ -8,7 +8,7 @@ export const waitForConfirm = async (): Promise<void> => {
 			if (byteArray.length > 0) {
 				if (byteArray[0] === 3) {
 					// Exit with CTRL + C
-					console.log("^C");
+					console.info("^C");
 					process.exit(1);
 				} else if (byteArray[0] === 13) {
 					// Continue with ENTER
